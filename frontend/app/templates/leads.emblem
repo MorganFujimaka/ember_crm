@@ -1,0 +1,13 @@
+article#leads
+  h1
+    | Leads
+    link-to 'New Lead' 'leads.new'
+
+  = input value=search placeholder='search' classNames='search'
+  
+  ul
+    each leads as |lead|
+      link-to 'leads.lead' lead tagName="li"
+        li= lead.fullName
+
+outlet

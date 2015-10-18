@@ -1,0 +1,37 @@
+outlet
+
+unless isEditing
+  article#lead
+    h1 
+      model.fullName
+      link-to 'edit' 'leads.lead.edit' model classNames='edit'
+
+    p
+      ' Name:
+      model.fullName
+
+    p
+      ' Email:
+      model.email
+
+    p
+      ' Phone:
+      model.phone
+
+    p
+      label Status:
+      .select = ember-selectize content=model.STATUSES selection=model.status value=model.status
+
+    p
+      label Notes:
+      br
+      = textarea value=model.notes
+
+    p
+      a.delete href='#' click='delete' delete
+      input type='submit' value='Save Changes' click='saveChanges'
+
+      if showUnsavedMessage
+        .unsaved unsaved changes
+      if model.isSaving
+        .saving saving...
