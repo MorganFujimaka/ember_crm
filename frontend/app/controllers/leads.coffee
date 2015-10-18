@@ -4,12 +4,12 @@ LeadsController = Ember.Controller.extend
 
   leads: ( ->
     if @get('search') then @get('searchedLeads') else @get('sortedLeads')
-  ).property('search', 'searchedLeads')
+  ).property('search', 'sortedLeads', 'searchedLeads')
 
   searchedLeads: ( ->
     search = @get('search').toLowerCase()
 
-    @get('model').filter (lead) =>
+    @get('sortedLeads').filter (lead) =>
       lead.get('fullName').toLowerCase().indexOf(search) != -1
   ).property('search', '@each.fullName')
 

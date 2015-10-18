@@ -2,7 +2,7 @@ header
   article
     .logo
       h1
-        a href="#" Ember CRM
+        link-to 'Ember CLI CRM' 'leads'
 
 section#main
   = outlet
