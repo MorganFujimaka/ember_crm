@@ -14,7 +14,6 @@ gem 'ember-cli-rails'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'faker'
 gem 'rabl'
-gem 'rack-cors', require: 'rack/cors'
 
 gem 'rails_12factor', group: :production
 

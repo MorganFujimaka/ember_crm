@@ -41,7 +41,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.API_HOST = 'http://emberclicrm.herokuapp.com'
+    ENV.API_HOST = 'https://emberclicrm.herokuapp.com'
   }
 
   return ENV;

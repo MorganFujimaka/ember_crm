@@ -9,7 +9,7 @@ Lead = DS.Model.extend
   fullName: (->
     @get('firstName') + ' ' + @get('lastName')
   ).property('firstName', 'lastName')
-  
+
   STATUSES: ['new', 'in progress', 'bad', 'closed']
 
 `export default Lead`
